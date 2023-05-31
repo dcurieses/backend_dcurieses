@@ -1,0 +1,3699 @@
+{
+	"info": {
+		"_postman_id": "22859a63-74ee-41f3-a639-806dc3128653",
+		"name": "backend_dcurieses",
+		"description": "Get all users registered in the platform.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27688582"
+	},
+	"item": [
+		{
+			"name": "Obtener todos los usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				},
+				"description": "Obtiene todos los usuarios registrados.\n\nRespuestas:\n\n- 200: Petición realizada con éxito.\n- 500: Ha ocurrido un error en la petición.\n    \n\n---\n\nGet all users registered.\n\nResponses:\n\n- 200: Request success.\n- 500: Request error."
+			},
+			"response": [
+				{
+					"name": "Éxito - Obtener todos los usuarios",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:06:17 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:06:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"nombre\": \"Usuario\",\n            \"dni\": \"92387604P\",\n            \"email\": \"correo@correo.com\",\n            \"capital_solicitado\": 100000,\n            \"simulaciones\": []\n        },\n        {\n            \"nombre\": \"Usuario\",\n            \"dni\": \"12345678Z\",\n            \"email\": \"correo@correo.com\",\n            \"capital_solicitado\": 100000,\n            \"simulaciones\": [\n                {\n                    \"id\": 1,\n                    \"dni\": \"12345678Z\",\n                    \"tae\": 3.75,\n                    \"plazo\": 15,\n                    \"cuota\": 727.22244265878,\n                    \"importe_total\": 130900.03967858,\n                    \"created_at\": \"2023-05-31T20:11:04.000000Z\",\n                    \"updated_at\": \"2023-05-31T20:11:04.000000Z\"\n                }\n            ]\n        },\n        {\n            \"nombre\": \"Usuario\",\n            \"dni\": \"63798305P\",\n            \"email\": \"correo@correo.com\",\n            \"capital_solicitado\": 100000,\n            \"simulaciones\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{dni}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{dni}}"
+					]
+				},
+				"description": "Obtener un determinado usuario dado por su dni.\n\nRespuestas:\n\n- 200: Petición realizada con éxito.\n- 500: Ha ocurrido un error en la petición.\n    \n\n---\n\nObtain a certain user given by his ID.\n\nResponses:\n\n- 200: Request success.\n- 500: Request error."
+			},
+			"response": [
+				{
+					"name": "Éxito - Obtener usuario",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:06:52 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:06:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"nombre\": \"Usuario\",\n        \"dni\": \"12345678Z\",\n        \"email\": \"correo@correo.com\",\n        \"capital_solicitado\": 100000,\n        \"simulaciones\": [\n            {\n                \"id\": 1,\n                \"dni\": \"12345678Z\",\n                \"tae\": 3.75,\n                \"plazo\": 15,\n                \"cuota\": 727.22244265878,\n                \"importe_total\": 130900.03967858,\n                \"created_at\": \"2023-05-31T20:11:04.000000Z\",\n                \"updated_at\": \"2023-05-31T20:11:04.000000Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 100000\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				},
+				"description": "Creación de un usuario nuevo.\n\nLa creación de un nuevo usuario require de los campos:\n\n- nombre: el nombre del usuario (cadena)\n- dni: el dni del usuario (cadena)\n- email: el correo electrónico del usuario (cadena)\n- capital solicitado: el capital solicitado por el usuario (número)\n    \n\nLa creación exitosa de un usuario nuevo vendrá tras la validación de que todos los campos existen en sus correctos formatos, incluyendo la validación del formato de correos electrónicos y que el dni sea correcto siguiendo el algoritmo oficial.\n\nNo se podrá añadir un usuario ya existente, definido esto por su DNI.\n\nRespuestas:\n\n- 201: Petición realizada con éxito.\n- 400: Datos incorrectos.\n- 422: Datos incorrectos.\n- 500: Ha ocurrido un error en la petición.\n    \n\n---\n\nCreate a new user.\n\nCreate a new user requires some fields:\n\n- nombre: user's name (string)\n- dni: user's id (string)\n- email: user's email (string)\n- capital solicitado: user's requested capital (float)\n    \n\nThe successful creation of a new user will come after validate all fields exists in their correct types, including email format validation and that the id is correct following the official algorithm.\n\nIt will not be possible to add an already existing user, defined by his ID.\n\nResponses:\n\n- 201: Request success.\n- 400: Request data invalid.\n- 422: Request data invalid.\n- 500: Request error."
+			},
+			"response": [
+				{
+					"name": "Éxito - Crear usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"79996191Y\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:08:10 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:08:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"nombre\": \"Usuario\",\n        \"dni\": \"79996191Y\",\n        \"email\": \"correo@correo.com\",\n        \"capital_solicitado\": 100000,\n        \"simulaciones\": []\n    }\n}"
+				},
+				{
+					"name": "Error - Nombre no cadena",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": 51,\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"75693747B\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:08:54 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:08:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El nombre debe ser un string\",\n    \"errors\": {\n        \"nombre\": [\n            \"El nombre debe ser un string\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Nombre vacio",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"73852393Z\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:09:30 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:09:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El nombre es necesario\",\n    \"errors\": {\n        \"nombre\": [\n            \"El nombre es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Nombre nulo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": null,\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"48660752C\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:10:16 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:10:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El nombre es necesario\",\n    \"errors\": {\n        \"nombre\": [\n            \"El nombre es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Email nulo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": null,\r\n    \"dni\" : \"79212069T\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:11:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:11:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The email field is required.\",\n    \"errors\": {\n        \"email\": [\n            \"The email field is required.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Email vacio",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"\",\r\n    \"dni\" : \"79212069T\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:11:43 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:11:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The email field is required.\",\n    \"errors\": {\n        \"email\": [\n            \"The email field is required.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Email invalido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correocorreo.com\",\r\n    \"dni\" : \"79212069T\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:12:20 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:12:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El email es invalido\",\n    \"errors\": {\n        \"email\": [\n            \"El email es invalido\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - DNI vacio",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:13:01 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:13:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El DNI es necesario\",\n    \"errors\": {\n        \"dni\": [\n            \"El DNI es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - DNI nulo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : null,\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:13:37 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:13:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El DNI es necesario\",\n    \"errors\": {\n        \"dni\": [\n            \"El DNI es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - DNI invalido 9 caracteres",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"123456789Z\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:14:06 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:14:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"errorMessage\": \"DNI incorrecto.\"\n}"
+				},
+				{
+					"name": "Error - DNI invalido 7 caracteres",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"1234567Z\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:14:20 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:14:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"errorMessage\": \"DNI incorrecto.\"\n}"
+				},
+				{
+					"name": "Error - DNI invalido sin letra",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"12345678\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:14:36 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:14:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"errorMessage\": \"DNI incorrecto.\"\n}"
+				},
+				{
+					"name": "Error - DNI invalido segun algoritmo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"12345678A\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:14:57 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:14:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"errorMessage\": \"DNI incorrecto.\"\n}"
+				},
+				{
+					"name": "Error - Capital nulo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"79212069T\",\r\n    \"capital_solicitado\": null\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:15:26 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:15:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El capital solicitado es necesario\",\n    \"errors\": {\n        \"capital_solicitado\": [\n            \"El capital solicitado es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Capital no numero",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"79212069T\",\r\n    \"capital_solicitado\": \"capital\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:16:00 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:16:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El capital solicitado debe ser un numero\",\n    \"errors\": {\n        \"capital_solicitado\": [\n            \"El capital solicitado debe ser un numero\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Capital negativo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"79625834H\",\r\n    \"capital_solicitado\": -100\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:19:30 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:19:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El capital solicitado debe ser mayor que cero\",\n    \"errors\": {\n        \"capital_solicitado\": [\n            \"El capital solicitado debe ser mayor que cero\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Capital cero",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"79625834H\",\r\n    \"capital_solicitado\": 0\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:20:10 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:20:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El capital solicitado debe ser mayor que cero\",\n    \"errors\": {\n        \"capital_solicitado\": [\n            \"El capital solicitado debe ser mayor que cero\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Usuario existente",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"email\": \"correo@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 100000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:20:39 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:20:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El usuario ya existe\",\n    \"errors\": {\n        \"dni\": [\n            \"El usuario ya existe\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Editar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"\",\r\n    \"email\": \"correoCambio@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 120000\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{dni}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{dni}}"
+					]
+				},
+				"description": "Edición de un usuario existente, dado su DNI.\n\nLa edición de un usuario permite modificar cualquiera de los campos del usuario:\n\n- nombre: el nombre del usuario (cadena)\n- dni: el dni del usuario (cadena)\n- email: el correo electrónico del usuario (cadena)\n- capital solicitado: el capital solicitado por el usuario (número)\n    \n\nLa edición exitosa de un usuario vendrá tras la validación de que los campos existen en sus correctos formatos, incluyendo la validación del formato de correos electrónicos y que el dni sea correcto siguiendo el algoritmo oficial, en caso de querer modificar alguno de estos dos.\n\nEl DNI del usuario no se podrá cambiar.\n\nRespuestas:\n\n- 200: Petición realizada con éxito.\n- 400: Datos incorrectos.\n- 422: Datos incorrectos.\n- 500: Ha ocurrido un error en la petición.\n    \n\n---\n\nEdit an existing user, given his ID.\n\nEdit a user allows you to modify any of the user's fields:\n\n- nombre: user's name (string)\n- dni: user's id (string)\n- email: user's email (string)\n- capital solicitado: user's requested capital (number)\n    \n\nThe successful edition of an user will come after validating that the fields exist in their correct formats, including validation of the email format and that the ID is correct following the official algorithm, in case you want to modify any of these two.\n\nUser´s ID cant be changed.\n\nResponses:\n\n- 200: Request success.\n- 400: Request data invalid.\n- 422: Request data invalid.\n- 500: Request error."
+			},
+			"response": [
+				{
+					"name": "Éxito - Editar usuario",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"UsuarioCambio\",\r\n    \"email\": \"correoCambio@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 120000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:21:09 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:21:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"nombre\": \"UsuarioCambio\",\n        \"dni\": \"12345678Z\",\n        \"email\": \"correoCambio@correo.com\",\n        \"capital_solicitado\": 120000,\n        \"simulaciones\": [\n            {\n                \"id\": 1,\n                \"dni\": \"12345678Z\",\n                \"tae\": 3.75,\n                \"plazo\": 15,\n                \"cuota\": 727.22244265878,\n                \"importe_total\": 130900.03967858,\n                \"created_at\": \"2023-05-31T20:11:04.000000Z\",\n                \"updated_at\": \"2023-05-31T20:11:04.000000Z\"\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Editar usuario cambiando dni",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"UsuarioCambio\",\r\n    \"email\": \"correoCambio@correo.com\",\r\n    \"dni\" : \"71956143E\",\r\n    \"capital_solicitado\": 120000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:33:51 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:33:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"errorMessage\": \"No se puede cambiar el DNI.\"\n}"
+				},
+				{
+					"name": "Error - Nombre vacio",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"\",\r\n    \"email\": \"correoCambio@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 120000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:36:03 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:36:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El nombre es necesario\",\n    \"errors\": {\n        \"nombre\": [\n            \"El nombre es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Nombre null",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": null,\r\n    \"email\": \"correoCambio@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 120000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:36:27 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:36:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El nombre es necesario\",\n    \"errors\": {\n        \"nombre\": [\n            \"El nombre es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Nombre no cadena",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": 10,\r\n    \"email\": \"correoCambio@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 120000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:36:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:36:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El nombre debe ser un string\",\n    \"errors\": {\n        \"nombre\": [\n            \"El nombre debe ser un string\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Email vacio",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"UsuarioCambio\",\r\n    \"email\": \"\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 120000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:36:58 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:36:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "55"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The email field is required.\",\n    \"errors\": {\n        \"email\": [\n            \"The email field is required.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Email null",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"UsuarioCambio\",\r\n    \"email\": null,\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 120000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:37:14 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:37:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The email field is required.\",\n    \"errors\": {\n        \"email\": [\n            \"The email field is required.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Email invalido",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"UsuarioCambio\",\r\n    \"email\": \"correocorreo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 120000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:37:32 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:37:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El email es invalido\",\n    \"errors\": {\n        \"email\": [\n            \"El email es invalido\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Email no cadena",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"UsuarioCambio\",\r\n    \"email\": 120,\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 120000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:37:51 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:37:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El email es invalido\",\n    \"errors\": {\n        \"email\": [\n            \"El email es invalido\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Capital nulo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"UsuarioCambio\",\r\n    \"email\": \"correoCambio@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": null\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:39:10 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:39:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El capital solicitado es necesario\",\n    \"errors\": {\n        \"capital_solicitado\": [\n            \"El capital solicitado es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Capital negativo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"UsuarioCambio\",\r\n    \"email\": \"correoCambio@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": -100\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:39:26 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:39:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El capital solicitado debe ser mayor que cero\",\n    \"errors\": {\n        \"capital_solicitado\": [\n            \"El capital solicitado debe ser mayor que cero\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Capital cero",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"UsuarioCambio\",\r\n    \"email\": \"correoCambio@correo.com\",\r\n    \"dni\" : \"12345678Z\",\r\n    \"capital_solicitado\": 0\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:39:38 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:39:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El capital solicitado debe ser mayor que cero\",\n    \"errors\": {\n        \"capital_solicitado\": [\n            \"El capital solicitado debe ser mayor que cero\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Borrar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{dni}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{dni}}"
+					]
+				},
+				"description": "Borrado de un usuario existente, dado su DNI.\n\nRespuestas:\n\n- 200: Petición realizada con éxito.\n- 400: Datos incorrectos.\n- 500: Ha ocurrido un error en la petición.\n    \n\n---\n\nDelete an existing user, given his ID.\n\nResponses:\n\n- 200: Request success.\n- 400: Request data invalid.\n- 500: Request error."
+			},
+			"response": [
+				{
+					"name": "Éxito - Borrar usuario",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/71956143E",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"71956143E"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:40:44 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:40:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Simular hipoteca",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tae\":  15,\r\n    \"plazo\": 15\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{dni}}",
+						"simulation"
+					]
+				},
+				"description": "Simulación de una hipoteca para un usuario existente, dado su DNI.\n\nLa simulación de una hipoteca para el usuario dado requiere de los campos:\n\n- tae: tasa anual equivalente o de equivalencia (número)\n- plazo: años de amortización (número)\n    \n\nLa simulación exitosa de una hipoteca vendrá tras la validación de que todos los campos existen en sus correctos formatos, en caso contrario no se llevará a cabo la simulación.\n\nRespuestas:\n\n- 200: Petición realizada con éxito.\n- 400: Datos incorrectos.\n- 422: Datos incorrectos.\n- 500: Ha ocurrido un error en la petición.\n    \n\n---\n\nSimulate a new mortgage for an existing user, given his ID.\n\nSimulate a new mortgage for the given user requires some fields:\n\n- tae: annual percentage rate (APR) (number)\n- plazo: years of amortization (number)\n    \n\nThe successful simulation of a mortgage will come after validating that the fields exist in their correct formats, otherwise the simulation will not be completed.\n\nResponses:\n\n- 200: Request success.\n- 400: Request data invalid.\n- 422: Request data invalid.\n- 500: Request error."
+			},
+			"response": [
+				{
+					"name": "Éxito - Simular hipoteca",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  3.75,\r\n    \"plazo\": 15\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}",
+								"simulation"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:56:27 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:56:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"dni\": \"12345678Z\",\n        \"tae\": 3.75,\n        \"plazo\": 15,\n        \"cuota\": 872.6669311905376,\n        \"importe_total\": 157080.04761429678,\n        \"updated_at\": \"2023-05-31T21:56:26.000000Z\",\n        \"created_at\": \"2023-05-31T21:56:26.000000Z\"\n    }\n}"
+				},
+				{
+					"name": "Error - Usuario no existente",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  15,\r\n    \"plazo\": 15\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/12345678A/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"12345678A",
+								"simulation"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:55:15 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 21:55:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"errorMessage\": \"El usuario no existe.\"\n}"
+				},
+				{
+					"name": "Error - TAE nulo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  null,\r\n    \"plazo\": 15\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}",
+								"simulation"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:03:30 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:03:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El TAE es necesario\",\n    \"errors\": {\n        \"tae\": [\n            \"El TAE es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - TAE cero",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  0,\r\n    \"plazo\": 15\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}",
+								"simulation"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:27:04 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:27:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El TAE debe ser mayor que cero\",\n    \"errors\": {\n        \"tae\": [\n            \"El TAE debe ser mayor que cero\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - TAE negativo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  -10,\r\n    \"plazo\": 15\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}",
+								"simulation"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:27:37 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:27:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El TAE debe ser mayor que cero\",\n    \"errors\": {\n        \"tae\": [\n            \"El TAE debe ser mayor que cero\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - TAE no numero",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  \"asd\",\r\n    \"plazo\": 15\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}",
+								"simulation"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:27:54 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:27:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El TAE debe ser un numero (and 1 more error)\",\n    \"errors\": {\n        \"tae\": [\n            \"El TAE debe ser un numero\",\n            \"El TAE debe ser mayor que cero\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Plazo nulo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  3,\r\n    \"plazo\": null\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}",
+								"simulation"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:28:13 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:28:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El plazo es necesario\",\n    \"errors\": {\n        \"plazo\": [\n            \"El plazo es necesario\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Plazo cero",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  15,\r\n    \"plazo\": 0\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}",
+								"simulation"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:28:28 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:28:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El plazo debe ser mayor que cero\",\n    \"errors\": {\n        \"plazo\": [\n            \"El plazo debe ser mayor que cero\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Plazo negativo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  3,\r\n    \"plazo\": -15\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}",
+								"simulation"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:28:43 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:28:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El plazo debe ser mayor que cero\",\n    \"errors\": {\n        \"plazo\": [\n            \"El plazo debe ser mayor que cero\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error - Plazo no numero",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tae\":  4,\r\n    \"plazo\": \"plazo\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/{{dni}}/simulation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"{{dni}}",
+								"simulation"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:28:57 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 22:28:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El plazo debe ser un numero (and 1 more error)\",\n    \"errors\": {\n        \"plazo\": [\n            \"El plazo debe ser un numero\",\n            \"El plazo debe ser mayor que cero\"\n        ]\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dni",
+			"value": "{dni}",
+			"type": "string"
+		}
+	]
+}
