@@ -25,7 +25,7 @@ class UpdateUserRequest extends FormRequest
             'nombre' => 'required|string',
             'dni' => 'required|string',
             'email' => 'required|email',
-            'capital_solicitado' => 'required|numeric'
+            'capital_solicitado' => 'required|numeric|gt:0'
         ];
     }
 
@@ -44,7 +44,8 @@ class UpdateUserRequest extends FormRequest
             'email.string' => 'El email es necesario',
             'email.email' => 'El email es invalido',
             'capital_solicitado.numeric' => 'El capital solicitado debe ser un numero',
-            'capital_solicitado.required' => 'El capital solicitado es necesario'
+            'capital_solicitado.required' => 'El capital solicitado es necesario',
+            'capital_solicitado.gt' => 'El capital solicitado debe ser mayor que cero'
         ];
     }
 }
