@@ -1,11 +1,11 @@
 # backend_dcurieses
 
-##Requisitos
+## Requisitos
 - PHP v8
 * Composer v2.5
 + Postman
 
-##Implementación
+## Implementación
 Una vez disponemos de los requisitos marcados en la parte superior, podemos realizar la implementación de la API.
 
 Para llevar a cabo la implementación de esta API REST hay que seguir los siguientes pasos:
