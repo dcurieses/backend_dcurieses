@@ -17,8 +17,9 @@ APP_URL=http://localhost
 DB_CONNECTION=sqlite
 DB_DATABASE=database.sqlite
 ```
-5. Ejecutar el comando ```php artisan migrate``` para generar las bases de datos.
-6. Ejecutar el comando ```php artisan serve``` para levantar la API REST.
+5. Ejecutar el comando ```touch database/database.sqlite``` sobre el directorio raíz.
+6. Ejecutar el comando ```php artisan migrate``` para generar las bases de datos.
+7. Ejecutar el comando ```php artisan serve``` para levantar la API REST.
 
 ### [Documentación de la API REST](https://documenter.getpostman.com/view/27688582/2s93mATKPN).
 
