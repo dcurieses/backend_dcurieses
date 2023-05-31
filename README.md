@@ -13,7 +13,7 @@ Para llevar a cabo la implementación de esta API REST hay que seguir los siguie
 2. Acceder desde una terminal al directorio donde se aloja el código de la API.
 3. Acceder a la carpeta /rest-api
 4. Crear el archivo .env en el directorio raíz
-5. Definir las variables siguientes: 
+5. Definir las variables siguientes dentro del .env: 
 ```
 APP_URL=http://localhost
 DB_CONNECTION=sqlite
