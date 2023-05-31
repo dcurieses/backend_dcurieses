@@ -4,6 +4,7 @@
 + Composer v2.5
 
 Se recomienda el uso de aplicaciones como Postman para realizar pruebas sobre la API.
+Existe en el repositorio una batería de pruebas para Postman con la cual se puede probar la API REST.
 
 ## Implementación
 Una vez tengamos los requisitos marcados en la parte superior, podemos implementar la api con los siguientes pasos:
