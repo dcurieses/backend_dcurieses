@@ -17,6 +17,9 @@ class SimulationController extends Controller
     {
         try{
             $user = User::find($dni);
+            if($user == null){
+                return response()->json(["code"=> 400, "errorMessage"=> "El usuario no existe."], 400);
+            }
             $validator = $request->validated();
             
             $tae = $validator['tae'] / 100 / 12;
@@ -31,7 +34,7 @@ class SimulationController extends Controller
             $user->simulaciones()->save($simulation);
             return response()->json(["code"=>200, 'data' => $simulation], 200);
         }catch (Throwable $e) {
-            return response()->json(["code"=> 500, "errorMessage"=> "Error al reaiizar la operación."], 500);
+            return response()->json(["code"=> 500, "errorMessage"=> "Error al realizar la operación."], 500);
         }
     }
 

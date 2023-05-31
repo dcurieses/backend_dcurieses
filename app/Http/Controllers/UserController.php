@@ -51,15 +51,17 @@ class UserController extends Controller
     {
         try{
             $user = User::find($dni);
-            if(User::find($request->input('dni')) != null && $request->input('dni') != $dni){
-                return response()->json(["code"=> 400, "errorMessage"=> "Ya existe un usuario con ese dni."], 400);
-            }else if($user == null){
+            $validate = $request->validated();
+            if($validate['dni'] != $dni){
+                return response()->json(["code"=> 400, "errorMessage"=> "No se puede cambiar el DNI."], 400);
+            }
+            if($user == null){
                 return response()->json(["code"=> 400, "errorMessage"=> "El usuario no existe."], 400);
             }
             if(!$this->isValidDni($request->input('dni'))){
                 return response()->json(["code"=> 400, "errorMessage"=> "DNI incorrecto."], 400);
             }
-            $user->update($request->validated());
+            $user->update($validate);
             return response()->json(["code"=>200, 'data' => UserResource::make($user)], 200);
         }catch (Throwable $e) {
             return response()->json(["code"=> 500, "errorMessage"=> "Error al reaiizar la operación."], 500);
@@ -69,7 +71,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function delete(User $user)
+    public function delete($dni)
     {
         try{
             return response()->json(["code"=>200, 'data' => User::destroy($dni)], 200);
