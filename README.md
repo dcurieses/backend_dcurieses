@@ -9,8 +9,8 @@ Se recomienda el uso de aplicaciones como Postman para realizar pruebas sobre la
 Una vez tengamos los requisitos marcados en la parte superior, podemos implementar la api con los siguientes pasos:
 1. Descargar el código fuente desde este repositorio.
 2. Acceder desde una terminal al directorio donde se encuentra el código.
-3. Crear en el directorio raíz del proyecto el archivo .env, existe un arcihvo de ejemplo denominado '.env.example'.
-4. Crear dentro del archivo .env las siguientes variables: 
+3. Crear en el directorio raíz del proyecto el archivo '.env', existe un archivo de ejemplo denominado '.env.example'.
+4. Crear dentro del archivo '.env' las siguientes variables: 
 ```
 APP_URL=http://localhost
 DB_CONNECTION=sqlite
