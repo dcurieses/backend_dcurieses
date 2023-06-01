@@ -2,6 +2,7 @@
 ## Requisitos
 + PHP v8
 + Composer v2.5
++ Sqlite v3
 
 Se recomienda el uso de aplicaciones como Postman para realizar pruebas sobre la API.
 Existe en el repositorio una batería de pruebas para Postman con la cual se puede probar la API REST.
